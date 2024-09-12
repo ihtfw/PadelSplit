@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Padel Bill Splitter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="court-price">Court Price (per hour):</label>
+            <input type="number" id="court-price" value="800">
+        </div>
+        <div class="form-group">
+            <label for="court-count">Number of Courts:</label>
+            <input type="number" id="court-count" value="2">
+        </div>
+        <div class="form-group">
+            <label for="hours-played">Number of Hours Played:</label>
+            <input type="number" id="hours-played" value="2" step="0.1">
+        </div>
+        <div class="form-group">
+            <label for="member-count">Players with Membership:</label>
+            <input type="number" id="member-count" value="0">
+        </div>
+        <div class="form-group">
+            <label for="non-member-count">Players without Membership:</label>
+            <input type="number" id="non-member-count" value="0">
+        </div>
+        <div class="form-group">
+            <label for="discount">Discount for Members (%):</label>
+            <input type="number" id="discount" value="50">
+        </div>
+        <button id="calculate-btn">Count</button>
+        <div class="result"></div>
+        <p>Full price / To pay: <span id="price-result">0 / 0</span></p>
+        <p>Total per member: <span id="member-result">0</span></p>
+        <p>Total per non-member: <span id="non-member-result">0</span></p>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
