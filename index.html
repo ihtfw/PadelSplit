@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="container">
         <div class="form-group">
             <label for="court-price">Court Price (per hour):</label>
             <input type="number" id="court-price" value="800">
@@ -34,12 +34,27 @@
             <label for="discount">Discount for Members (%):</label>
             <input type="number" id="discount" value="50">
         </div>
+        <div class="form-group ">
+            <div class="extra-players-container">
+                <!-- <div class="extra-player">
+                    <div class="form-group">
+                        <label for="is-member-checkbox" class="is-member-label">Is Member:</label>
+                        <input type="checkbox" id="is-member-checkbox" class="is-member"></input>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="hours-played">Number of Hours Played:</label>
+                        <input type="number" id="hours-played" value="2" step="0.1">
+                    </div>
+                </div> -->
+                <button class="add-extra-player-btn">Add extra player</button>
+            </div>
+        </div>
         <button id="calculate-btn">Count</button>
         <div class="result"></div>
         <p>Full price / To pay: <span id="price-result">0 / 0</span></p>
-        <p>Total per member: <span id="member-result">0</span></p>
-        <p>Total per non-member: <span id="non-member-result">0</span></p>
-    </div>
+        <p>For member: <span id="member-result">0</span></p>
+        <p>For non-member: <span id="non-member-result">0</span></p>
     </div>
 
     <script src="script.js"></script>
