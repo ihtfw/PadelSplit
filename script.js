@@ -132,15 +132,13 @@ document.addEventListener("DOMContentLoaded", () => {
       toPay / (totalMemeberHours + totalNonMemberHours * 2);
     const nonMemberHourPrice = memberHourPrice * 2;
 
-    const memberPrice = hoursPlayed * memberHourPrice;
-    const nonMemberPrice = hoursPlayed * nonMemberHourPrice;
+    const memberPrice = Math.ceil(hoursPlayed * memberHourPrice);
+    const nonMemberPrice = Math.ceil(hoursPlayed * nonMemberHourPrice);
 
     document.getElementById("price-result").textContent =
       totalPrice.toFixed(2) + " / " + toPay.toFixed(2);
-    document.getElementById("member-result").textContent =
-      memberPrice.toFixed(2);
-    document.getElementById("non-member-result").textContent =
-      nonMemberPrice.toFixed(2);
+    document.getElementById("member-result").textContent = memberPrice;
+    document.getElementById("non-member-result").textContent = nonMemberPrice;
 
     const containerDiv = document.getElementById("container");
     const tempResults = containerDiv.querySelectorAll(".temp-result");
